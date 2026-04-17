@@ -1,0 +1,21 @@
+| Command                    | Example                     | Explanation                                                            |
+| -------------------------- | --------------------------- | ---------------------------------------------------------------------- |
+| Basic Scan                 | `nmap 192.168.1.1`          | Scans the most common ports of the target and shows open/closed status |
+| Scan Specific Ports        | `nmap -p 22,80 192.168.1.1` | Scans only selected ports (22 → SSH, 80 → HTTP)                        |
+| Scan All Ports             | `nmap -p- 192.168.1.1`      | Scans all 65535 ports to find every open service                       |
+| Service Version Detection  | `nmap -sV 192.168.1.1`      | Detects service name and version running on open ports                 |
+| OS Detection               | `nmap -O 192.168.1.1`       | Identifies the operating system of the target                          |
+| Aggressive Scan            | `nmap -A 192.168.1.1`       | Performs OS detection, version detection, script scan, and traceroute  |
+| SYN Scan (Stealth)         | `nmap -sS 192.168.1.1`      | Half-open scan; faster and less detectable (needs admin/root)          |
+| TCP Connect Scan           | `nmap -sT 192.168.1.1`      | Full TCP connection scan; used when no admin/root access               |
+| UDP Scan                   | `nmap -sU 192.168.1.1`      | Scans UDP ports (e.g., DNS, DHCP)                                      |
+| Ping Scan (Host Discovery) | `nmap -sn 192.168.1.0/24`   | Finds active hosts without scanning ports                              |
+| Network Scan               | `nmap 192.168.1.0/24`       | Scans all devices in the subnet                                        |
+
+| Command               | Example                         | Explanation                                               |
+| --------------------- | ------------------------------- | --------------------------------------------------------- |
+| Fast Scan             | `nmap -F 192.168.1.1`           | Scans only top 100 common ports (faster than normal scan) |
+| Show Open Ports Only  | `nmap --open 192.168.1.1`       | Displays only open ports, hides closed/filtered ones      |
+| Scan Multiple Targets | `nmap 192.168.1.1 192.168.1.10` | Scans more than one IP at the same time                   |
+| Scan by Hostname      | `nmap scanme.nmap.org`          | Scans using domain name instead of IP                     |
+

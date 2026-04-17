@@ -1,0 +1,11 @@
+10 Hex Passwords (Length 12):
+
+for /L %i in (1,1,10) do openssl rand -hex 6
+
+Base64 Passwords (Length 12):
+
+for /L %i in (1,1,10) do openssl rand -base64 12
+
+Strictly 12 Alphanumeric Characters
+
+for /L %i in (1,1,10) do openssl rand -hex 6
